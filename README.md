@@ -1,59 +1,114 @@
-# Client
+# 🚀 Angular Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+This is a modular Angular application following best practices with environment-based configurations, Prettier formatting, and ready-to-use commands for development, staging, and production.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📁 Project Setup
 
-```bash
-ng serve
-```
+1. **Install dependencies**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+   ```bash
+   npm install
+   ```
 
-## Code scaffolding
+2. **Code Formatting**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+   Format your code using Prettier before committing:
 
-```bash
-ng generate component component-name
-```
+   ```bash
+   npm run format
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🌐 Serve the Application
 
-## Building
-
-To build the project run:
+### Development
 
 ```bash
-ng build
+ng serve --open
+```
+```bash
+ng serve --configuration=development
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Staging
 
 ```bash
-ng test
+ng serve --configuration=staging
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Production
 
 ```bash
-ng e2e
+ng serve --configuration=production
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🏗️ Build the Application
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Development Build
+
+```bash
+ng build --configuration=development
+```
+
+### Staging Build
+
+```bash
+ng build --configuration=staging
+```
+
+### Production Build
+
+```bash
+ng build --configuration=production
+```
+
+---
+
+## 🌎 Environment Files
+
+Environment-specific configuration files are located in:
+
+```
+src/environments/
+├── environment.ts              # Default (development)
+├── environment.stag.ts         # Staging
+└── environment.prod.ts         # Production
+```
+
+To add custom variables, update these files and reference via `environment.<key>` after importing:
+
+```ts
+import { environment } from 'src/environments/environment';
+
+console.log(environment.apiUrl);
+```
+
+---
+
+## ✅ Pre-push Checklist
+
+Before pushing your code to the repository:
+
+- [ ] ✅ Format your code: `npm run format`
+- [ ] ✅ Test locally with `ng serve --configuration=<env>`
+- [ ] ✅ Ensure environment variables are correctly configured
+- [ ] ✅ Verify there are no build errors
+
+---
+
+## 📦 Scripts Overview
+
+| Script             | Description                        |
+|--------------------|------------------------------------|
+| `npm run format`   | Format all code using Prettier     |
+| `ng serve`         | Run local dev server               |
+| `ng build`         | Build the app for deployment       |
+
+---
+
+Feel free to update this README as your project evolves. Happy coding! 💻✨
