@@ -8,17 +8,17 @@ This is a modular Angular application following best practices with environment-
 
 1. **Install dependencies**
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 2. **Code Formatting**
 
-   Format your code using Prettier before committing:
+    Format your code using Prettier before committing:
 
-   ```bash
-   npm run format
-   ```
+    ```bash
+    npm run format
+    ```
 
 ---
 
@@ -29,6 +29,7 @@ This is a modular Angular application following best practices with environment-
 ```bash
 ng serve --open
 ```
+
 ```bash
 ng serve --configuration=development
 ```
@@ -83,7 +84,7 @@ src/environments/
 To add custom variables, update these files and reference via `environment.<key>` after importing:
 
 ```ts
-import { environment } from 'src/environments/environment';
+import { environment } from "src/environments/environment";
 
 console.log(environment.apiUrl);
 ```
@@ -103,11 +104,11 @@ Before pushing your code to the repository:
 
 ## 📦 Scripts Overview
 
-| Script             | Description                        |
-|--------------------|------------------------------------|
-| `npm run format`   | Format all code using Prettier     |
-| `ng serve`         | Run local dev server               |
-| `ng build`         | Build the app for deployment       |
+| Script           | Description                    |
+| ---------------- | ------------------------------ |
+| `npm run format` | Format all code using Prettier |
+| `ng serve`       | Run local dev server           |
+| `ng build`       | Build the app for deployment   |
 
 ---
 
