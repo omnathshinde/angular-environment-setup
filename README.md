@@ -55,17 +55,26 @@ ng serve --configuration=production
 ```bash
 ng build --configuration=development
 ```
+```bash
+ng build --configuration development
+```
 
 ### Staging Build
 
 ```bash
 ng build --configuration=staging
 ```
+```bash
+ng build --configuration staging
+```
 
 ### Production Build
 
 ```bash
 ng build --configuration=production
+```
+```bash
+ng build --configuration production
 ```
 
 ---
